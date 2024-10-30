@@ -7,15 +7,6 @@ def add_matrices(A, B):
     return C
 
 
-def sub_matrices(A, B):
-    n = len(A)
-    C = [[0] * n for _ in range(n)]
-    for i in range(n):
-        for j in range(n):
-            C[i][j] = A[i][j] - B[i][j]
-    return C
-
-
 def split_matrix(matrix):
     n = len(matrix)
     mid = n // 2
