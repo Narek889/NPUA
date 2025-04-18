@@ -6,7 +6,7 @@ def find(edges, n, source, destination, visited=None):
     graph = {i: [] for i in range(n)}
     for edge in edges:
         graph[edge[0]].append(edge[1])
-        graph[edge[1]].append(edge[0])  # Assuming the graph is undirected
+        graph[edge[1]].append(edge[0])
 
     if source not in visited:
         print(source)
@@ -23,11 +23,11 @@ edges = [[0, 1], [1, 2], [2, 0]]
 n = 3
 destination = 2
 source = 0
-print(f"ex 1 = {find(edges, n, source, destination)}")  # Output: ex 1 = True
+print(f"ex 1 = {find(edges, n, source, destination)}")
 
 # Example 2
 edges_2 = [[0, 1], [0, 2], [3, 5], [5, 4], [4, 3]]
 n_2 = 6
 destination_2 = 5
 source_2 = 0
-print(f"ex 2 = {find(edges_2, n_2, source_2, destination_2)}")  # Output: ex 2 = False
+print(f"ex 2 = {find(edges_2, n_2, source_2, destination_2)}")
