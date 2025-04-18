@@ -2,7 +2,6 @@ def find(edges, n, source, destination, visited=None):
     if visited is None:
         visited = set()
 
-    # Convert edges to an adjacency list
     graph = {i: [] for i in range(n)}
     for edge in edges:
         graph[edge[0]].append(edge[1])
@@ -18,14 +17,14 @@ def find(edges, n, source, destination, visited=None):
                 return True
     return False
 
-# Example 1
+
 edges = [[0, 1], [1, 2], [2, 0]]
 n = 3
 destination = 2
 source = 0
 print(f"ex 1 = {find(edges, n, source, destination)}")
 
-# Example 2
+
 edges_2 = [[0, 1], [0, 2], [3, 5], [5, 4], [4, 3]]
 n_2 = 6
 destination_2 = 5
